@@ -86,6 +86,36 @@
             background-color: #cc6a00;
         }
 
+        /* Offer Table Section */
+        .offer-table {
+            margin-top: 50px;
+            padding: 50px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 8px;
+        }
+
+        .offer-table table {
+            width: 100%;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        .offer-table table th, .offer-table table td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+
+        .offer-table table th {
+            background-color: #ff8c00;
+            color: white;
+        }
+
+        .offer-table table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
         /* Footer Styling */
         footer {
             text-align: center;
@@ -112,13 +142,34 @@
     <div class="home">
         <h2>Looking for High-Quality Leads?</h2>
         <p>KeyConnect connects you to high-quality leads in the real estate market. We specialize in targeted campaigns for real estate agents, helping you grow your business and increase sales potential.</p>
-        <a href="#services" class="learn-more-btn">Learn More</a> <!-- Learn More Button -->
+        <a href="#services" class="learn-more-btn">Learn More</a>
     </div>
 
     <!-- "What We Offer" Section -->
-    <div id="services" style="padding: 50px; text-align: center;">
+    <div id="services" class="offer-table">
         <h3>What We Offer</h3>
-        <p>Our services are designed to generate quality leads and help you expand your real estate business. From lead generation to full-service marketing campaigns, we have the solutions you need.</p>
+        <table>
+            <tr>
+                <th>Service</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Lead Generation</td>
+                <td>We generate high-quality leads using targeted Facebook ads.</td>
+                <td>$500/month</td>
+            </tr>
+            <tr>
+                <td>Full Service</td>
+                <td>We create and manage end-to-end marketing campaigns for real estate agents.</td>
+                <td>$1500/month</td>
+            </tr>
+            <tr>
+                <td>Custom Campaigns</td>
+                <td>Custom ad strategies tailored to your specific needs and market.</td>
+                <td>Contact for pricing</td>
+            </tr>
+        </table>
     </div>
 
     <!-- Footer -->
