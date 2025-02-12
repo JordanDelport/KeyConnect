@@ -5,104 +5,202 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KeyConnect - Real Estate Leads</title>
     <style>
+        /* Global Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa;
+            background-color: #f4f4f9;
             color: #333;
         }
+        h2, h3 {
+            color: #333;
+        }
+        
+        /* Header Styling */
         header {
-            background-color: #002147;
+            background-color: #1f1f1f;
             color: white;
-            padding: 20px;
+            padding: 30px;
             text-align: center;
-            font-size: 24px;
+            font-size: 30px;
             font-weight: bold;
+            text-transform: uppercase;
         }
+        
+        /* Container for all content */
         .container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 40px;
             background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
         }
-        .cta {
+
+        /* Navigation Links */
+        nav {
             text-align: center;
             margin-top: 20px;
         }
-        .cta button {
-            background-color: #004080;
+        nav a {
+            text-decoration: none;
+            color: #ff8c00;
+            margin: 0 20px;
+            font-size: 18px;
+        }
+        
+        /* Buttons */
+        .cta button, .package button {
+            background-color: #ff8c00;
             color: white;
             border: none;
-            padding: 10px 20px;
-            font-size: 18px;
+            padding: 15px 30px;
+            font-size: 20px;
             cursor: pointer;
-            border-radius: 5px;
-        }
-        .cta button:hover {
-            background-color: #003366;
-        }
-        .contact, .services, .pricing {
-            margin-top: 30px;
-            padding: 20px;
-            background-color: #eef1f5;
             border-radius: 8px;
+            transition: background-color 0.3s ease;
         }
-        .placeholder {
-            text-align: center;
-            font-style: italic;
-            color: #777;
+        .cta button:hover, .package button:hover {
+            background-color: #cc6a00;
         }
+        
+        /* Services and About */
+        .services, .about, .pricing, .contact {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #e6e6e6;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .services h3, .about h3, .pricing h3, .contact h3 {
+            color: #ff8c00;
+            font-weight: bold;
+        }
+
+        /* Image placeholders with border */
         .image-placeholder {
             width: 100%;
-            height: 200px;
-            background-color: #ccc;
+            height: 250px;
+            background-color: #ddd;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 18px;
             color: #555;
-            border-radius: 8px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
         }
+
+        /* Package Blocks */
+        .packages {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        .package {
+            width: 30%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .package h4 {
+            color: #333;
+            font-size: 24px;
+        }
+        
+        /* Footer Styling */
         footer {
             text-align: center;
-            padding: 20px;
-            background-color: #002147;
+            padding: 25px;
+            background-color: #1f1f1f;
             color: white;
-            margin-top: 40px;
+            font-size: 16px;
+            margin-top: 50px;
+        }
+        
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            header {
+                font-size: 24px;
+            }
+            .cta button {
+                padding: 12px 25px;
+                font-size: 18px;
+            }
+            .packages {
+                flex-direction: column;
+                align-items: center;
+            }
+            .package {
+                width: 80%;
+                margin-bottom: 20px;
+            }
         }
     </style>
 </head>
 <body>
     <header>KeyConnect - Connecting Quality Buyers & Sellers</header>
+
     <div class="container">
-        <h2>Helping Real Estate Agents Get Quality Leads</h2>
-        <p>We specialize in connecting real estate agents with serious buyers and sellers using targeted Facebook advertising.</p>
-        <div class="image-placeholder">[ Image Placeholder ]</div>
-        <div class="cta">
-            <button>Get Started</button>
-        </div>
+        <!-- Navigation Links -->
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#packages">What We Offer</a>
+            <a href="#contact">Contact</a>
+        </nav>
         
-        <div class="services">
-            <h3>Our Services</h3>
-            <p class="placeholder">Details about the services offered will be added here.</p>
-            <div class="image-placeholder">[ Service Image Placeholder ]</div>
-        </div>
-        
-        <div class="pricing">
-            <h3>Pricing & Packages</h3>
-            <p class="placeholder">Pricing plans and service packages will be added soon.</p>
-        </div>
-        
-        <div class="contact">
+        <!-- Home Section -->
+        <section id="home">
+            <h2>Helping Real Estate Agents Get Quality Leads</h2>
+            <p>We specialize in connecting real estate agents with serious buyers and sellers using targeted advertising strategies.</p>
+            <div class="image-placeholder">[ Main Image Placeholder ]</div>
+            <div class="cta">
+                <button>Get Started</button>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <h3>About Us</h3>
+            <p>At KeyConnect, we help real estate agents connect with quality leads through strategic Facebook advertising. Our goal is to drive serious buyers and sellers directly to agents to help grow their business.</p>
+        </section>
+
+        <!-- What We Offer (Packages) Section -->
+        <section id="packages" class="packages">
+            <div class="package">
+                <h4>Basic Package</h4>
+                <p>Basic lead generation for real estate agents.</p>
+                <button>Buy Now</button>
+            </div>
+            <div class="package">
+                <h4>Advanced Package</h4>
+                <p>More advanced targeting and higher-quality leads.</p>
+                <button>Buy Now</button>
+            </div>
+            <div class="package">
+                <h4>Premium Package</h4>
+                <p>Full service with detailed analytics and ongoing optimization.</p>
+                <button>Buy Now</button>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
             <h3>Contact Us</h3>
             <p><strong>Jordan van Heerden:</strong> 066 022 3278</p>
             <p><strong>Kihara Bezuidenhout:</strong> 071 631 3829</p>
             <p>Email: Coming soon...</p>
-        </div>
+        </section>
     </div>
+
     <footer>&copy; 2025 KeyConnect. All rights reserved.</footer>
 </body>
 </html>
