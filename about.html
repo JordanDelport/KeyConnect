@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - KeyConnect</title>
     <style>
-        /* Add all your CSS here */
+        /* Use same styles as previous page */
         body {
             font-family: 'Arial', sans-serif;
             background-color: #f4f4f9;
@@ -22,6 +22,30 @@
             text-transform: uppercase;
         }
 
+        nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ff8c00;
+            margin: 0 20px;
+            font-size: 18px;
+        }
+
+        nav .home-btn {
+            background-color: #ff8c00;
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 8px;
+        }
+
+        nav .home-btn:hover {
+            background-color: #cc6a00;
+        }
+
         .container {
             max-width: 800px;
             margin: 50px auto;
@@ -29,15 +53,6 @@
             background-color: white;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             border-radius: 12px;
-        }
-
-        h2 {
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 18px;
-            line-height: 1.6;
         }
 
         footer {
@@ -48,20 +63,34 @@
             font-size: 16px;
             margin-top: 50px;
         }
+
+        section {
+            margin-bottom: 50px;
+        }
     </style>
 </head>
 <body>
     <header>About Us - KeyConnect</header>
 
     <div class="container">
-        <h2>Our Mission</h2>
-        <p>At KeyConnect, we specialize in connecting real estate agents with serious buyers and sellers through the power of targeted advertising strategies, particularly using Facebook ads. Our goal is to make it easier for agents to find high-quality leads that are ready to take action.</p>
+        <nav>
+            <a href="index.html" class="home-btn">Home</a>
+        </nav>
         
-        <h2>Our Story</h2>
-        <p>Founded by passionate real estate professionals, we understand the challenges agents face when trying to connect with the right clients. We’ve created a streamlined process to help agents reach their goals efficiently and effectively, with a focus on transparent communication and measurable results.</p>
-        
-        <h2>Our Values</h2>
-        <p>At KeyConnect, we believe in integrity, professionalism, and dedication. We prioritize delivering results that matter and helping real estate agents grow their businesses sustainably.</p>
+        <section>
+            <h2>Our Mission</h2>
+            <p>At KeyConnect, we specialize in connecting real estate agents with serious buyers and sellers using targeted advertising strategies.</p>
+        </section>
+
+        <section>
+            <h2>Our Story</h2>
+            <p>Founded by passionate real estate professionals, we understand the challenges agents face. We've created a streamlined process to help agents reach their goals efficiently.</p>
+        </section>
+
+        <section>
+            <h2>Our Values</h2>
+            <p>Integrity, professionalism, and dedication guide our business to deliver measurable results to real estate agents.</p>
+        </section>
     </div>
 
     <footer>
