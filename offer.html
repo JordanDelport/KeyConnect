@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What We Offer - KeyConnect</title>
+    <title>What We Offer | KeyConnect</title>
     <style>
-        /* Global Styles */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f9;
-            color: #333; /* Dark text for better visibility */
+            color: #333;
         }
 
         /* Header Styling */
@@ -27,10 +26,14 @@
             text-align: center;
         }
 
-        header div {
+        header div a {
             color: black;
-            text-align: center;
+            text-decoration: none;
             font-size: 36px;
+        }
+
+        header div a:hover {
+            text-decoration: underline;
         }
 
         /* Navigation Links */
@@ -51,45 +54,17 @@
 
         /* Offer Section */
         .offer {
-            padding: 50px 20px;
+            padding: 50px;
             text-align: center;
         }
 
         .offer h2 {
-            font-size: 40px;
-            margin-bottom: 20px;
+            font-size: 36px;
         }
 
         .offer p {
             font-size: 22px;
-            color: #555;
-            margin-bottom: 30px;
-        }
-
-        .packages {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 50px;
-        }
-
-        .package {
-            width: 30%;
-            padding: 20px;
-            border-radius: 12px;
-            background-color: white;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .package h4 {
-            font-size: 30px;
-            margin-bottom: 20px;
-        }
-
-        .package p {
-            font-size: 18px;
-            color: #555;
+            margin-top: 20px;
         }
 
         /* Footer Styling */
@@ -106,8 +81,7 @@
 <body>
 
     <header>
-        <div>KeyConnect</div>
-        <!-- Navigation Links -->
+        <div><a href="index.html">KeyConnect</a></div> <!-- Clickable KeyConnect -->
         <nav>
             <a href="about.html">About</a>
             <a href="offer.html">What We Offer</a>
@@ -118,25 +92,7 @@
     <!-- Offer Section -->
     <div class="offer">
         <h2>What We Offer</h2>
-        <p>At KeyConnect, we provide high-quality lead generation services tailored to meet the needs of real estate agents. Our goal is to connect you with qualified buyers and sellers, increasing your sales potential and business growth.</p>
-
-        <div class="packages">
-            <div class="package">
-                <h4>Basic Package</h4>
-                <p>Affordable lead generation solutions for small businesses.</p>
-                <a href="contact.html"><button>Buy Now</button></a>
-            </div>
-            <div class="package">
-                <h4>Advanced Package</h4>
-                <p>Targeted campaigns to generate higher-quality leads.</p>
-                <a href="contact.html"><button>Buy Now</button></a>
-            </div>
-            <div class="package">
-                <h4>Premium Package</h4>
-                <p>Full-service solution with analytics and optimization.</p>
-                <a href="contact.html"><button>Buy Now</button></a>
-            </div>
-        </div>
+        <p>KeyConnect offers tailored Facebook ad campaigns to generate high-quality leads for your real estate business. From targeted advertising to lead management, we ensure you reach the right audience.</p>
     </div>
 
     <!-- Footer -->
