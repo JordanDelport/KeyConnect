@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - KeyConnect</title>
+    <title>Contact Us - KeyConnect</title>
     <style>
         /* Global Styles */
         body {
@@ -50,56 +50,52 @@
             color: #cc6a00;
         }
 
-        /* Contact Form Section */
-        .contact-form {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 500px;
-            background-color: #f9f9f9;
-            padding: 20px;
+        /* Form Section */
+        .form-section {
+            padding: 50px 20px;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin-top: 100px; /* Added margin to push the form down */
         }
 
-        .form-container {
+        .form-section h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .form-section p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            color: #555;
+        }
+
+        .form-section form {
             width: 50%;
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
         }
 
-        .form-container h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        .form-container label {
-            font-size: 18px;
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        .form-container input, .form-container textarea {
-            width: 100%;
+        .form-section input, .form-section textarea {
             padding: 10px;
-            margin-bottom: 20px;
             font-size: 16px;
+            border-radius: 5px;
             border: 1px solid #ccc;
-            border-radius: 8px;
         }
 
-        .form-container button {
+        .form-section button {
+            padding: 10px 20px;
             background-color: #ff8c00;
             color: white;
             border: none;
-            padding: 15px 30px;
-            font-size: 18px;
             cursor: pointer;
-            border-radius: 8px;
+            border-radius: 5px;
+            font-size: 18px;
             transition: background-color 0.3s ease;
         }
 
-        .form-container button:hover {
+        .form-section button:hover {
             background-color: #cc6a00;
         }
 
@@ -113,6 +109,16 @@
             margin-top: 50px;
         }
 
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .form-section form {
+                width: 80%;
+            }
+
+            .form-section button {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -128,25 +134,18 @@
     </header>
 
     <!-- Contact Form Section -->
-    <div class="contact-form">
-        <div class="form-container">
-            <h2>Contact Us</h2>
-            <form action="submit_form.php" method="POST">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="phone">Phone Number</label>
-                <input type="text" id="phone" name="phone" required>
-
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
+    <div class="form-section">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you. Please fill in the form below and we'll get in touch with you shortly.</p>
+        
+        <form action="submit_form.php" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="text" name="surname" placeholder="Your Surname" required>
+            <input type="tel" name="phone" placeholder="Your Phone Number" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
     </div>
 
     <!-- Footer -->
