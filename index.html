@@ -4,67 +4,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KeyConnect - Real Estate Leads</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        h2, h3 {
+            color: #333;
+        }
+        
+        /* Header Styling */
+        header {
+            background-color: #1f1f1f;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        
+        /* Container for all content */
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 40px;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+        }
+
+        /* Navigation Links */
+        nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #ff8c00;
+            margin: 0 20px;
+            font-size: 18px;
+        }
+        
+        /* Buttons */
+        .cta button, .package button {
+            background-color: #ff8c00;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        .cta button:hover, .package button:hover {
+            background-color: #cc6a00;
+        }
+        
+        /* Package Blocks */
+        .packages {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        .package {
+            width: 30%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .package h4 {
+            color: #333;
+            font-size: 24px;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background-color: #1f1f1f;
+            color: white;
+            font-size: 16px;
+            margin-top: 50px;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            header {
+                font-size: 24px;
+            }
+            .cta button {
+                padding: 12px 25px;
+                font-size: 18px;
+            }
+            .packages {
+                flex-direction: column;
+                align-items: center;
+            }
+            .package {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>KeyConnect - Connecting Quality Buyers & Sellers</h1>
+    <header>KeyConnect - Connecting Quality Buyers & Sellers</header>
+
+    <div class="container">
+        <!-- Navigation Links -->
         <nav>
-            <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="offer.html">What We Offer</a>
-            <a href="contact.html">Contact Us</a>
+            <a href="contact.html">Contact</a>
         </nav>
-    </header>
-    
-    <div class="container">
-        <h2>Helping Real Estate Agents Get Quality Leads</h2>
-        <p>We specialize in connecting real estate agents with serious buyers and sellers using targeted Facebook advertising.</p>
         
-        <div class="cta">
-            <button>Get Started</button>
-        </div>
-        
-        <div class="services">
-            <h3>Our Services</h3>
-            <p class="placeholder">Details about the services offered will be added here.</p>
-            <div class="image-placeholder">[ Service Image Placeholder ]</div>
-        </div>
-        
-        <div class="pricing">
-            <h3>Pricing & Packages</h3>
-            <p class="placeholder">Pricing plans and service packages will be added soon.</p>
-        </div>
-        
-        <div class="service-packages">
-            <h3>What We Offer</h3>
+        <!-- Home Section -->
+        <section id="home">
+            <h2>Helping Real Estate Agents Get Quality Leads</h2>
+            <p>We specialize in connecting real estate agents with serious buyers and sellers using targeted advertising strategies.</p>
+            <div class="cta">
+                <button>Get Started</button>
+            </div>
+        </section>
+
+        <!-- Packages Section -->
+        <section id="packages" class="packages">
             <div class="package">
-                <h4>Package 1</h4>
-                <p>Short description of Package 1...</p>
-                <a href="offer.html#package1" class="buy-now">Buy Now</a>
+                <h4>Basic Package</h4>
+                <p>Basic lead generation for real estate agents.</p>
+                <a href="offer.html#basic"><button>Buy Now</button></a>
             </div>
             <div class="package">
-                <h4>Package 2</h4>
-                <p>Short description of Package 2...</p>
-                <a href="offer.html#package2" class="buy-now">Buy Now</a>
+                <h4>Advanced Package</h4>
+                <p>More advanced targeting and higher-quality leads.</p>
+                <a href="offer.html#advanced"><button>Buy Now</button></a>
             </div>
             <div class="package">
-                <h4>Package 3</h4>
-                <p>Short description of Package 3...</p>
-                <a href="offer.html#package3" class="buy-now">Buy Now</a>
+                <h4>Premium Package</h4>
+                <p>Full service with detailed analytics and ongoing optimization.</p>
+                <a href="offer.html#premium"><button>Buy Now</button></a>
             </div>
-        </div>
-        
-        <div class="contact-info">
-            <h3>Contact Us</h3>
-            <p><strong>Jordan van Heerden:</strong> 066 022 3278</p>
-            <p><strong>Kihara Bezuidenhout:</strong> 071 631 3829</p>
-            <p>Email: Coming soon...</p>
-        </div>
+        </section>
     </div>
 
     <footer>
-        <p>&copy; 2025 KeyConnect. All rights reserved.</p>
+        <p>Contact us: <strong>Jordan van Heerden:</strong> 066 022 3278 | <strong>Kihara Bezuidenhout:</strong> 071 631 3829</p>
     </footer>
 </body>
 </html>
