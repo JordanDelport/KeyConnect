@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - KeyConnect</title>
+    <title>About Us | KeyConnect</title>
     <style>
-        /* Global Styles */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f9;
-            color: #333; /* Dark text for better visibility */
+            color: #333;
         }
 
         /* Header Styling */
@@ -27,10 +26,14 @@
             text-align: center;
         }
 
-        header div {
+        header div a {
             color: black;
-            text-align: center;
+            text-decoration: none;
             font-size: 36px;
+        }
+
+        header div a:hover {
+            text-decoration: underline;
         }
 
         /* Navigation Links */
@@ -49,21 +52,19 @@
             color: #cc6a00;
         }
 
-        /* About Section */
+        /* About Us Section */
         .about {
-            padding: 50px 20px;
+            padding: 50px;
             text-align: center;
         }
 
         .about h2 {
-            font-size: 40px;
-            margin-bottom: 20px;
+            font-size: 36px;
         }
 
         .about p {
             font-size: 22px;
-            color: #555;
-            margin-bottom: 30px;
+            margin-top: 20px;
         }
 
         /* Footer Styling */
@@ -80,8 +81,7 @@
 <body>
 
     <header>
-        <div>KeyConnect</div>
-        <!-- Navigation Links -->
+        <div><a href="index.html">KeyConnect</a></div> <!-- Clickable KeyConnect -->
         <nav>
             <a href="about.html">About</a>
             <a href="offer.html">What We Offer</a>
@@ -89,10 +89,10 @@
         </nav>
     </header>
 
-    <!-- About Section -->
+    <!-- About Us Section -->
     <div class="about">
-        <h2>About Us</h2>
-        <p>KeyConnect is a real estate lead generation agency, dedicated to connecting agents with high-quality buyers and sellers. We focus on providing real estate professionals with the right tools to grow their businesses through targeted marketing campaigns.</p>
+        <h2>About KeyConnect</h2>
+        <p>We specialize in connecting real estate agents with serious buyers and sellers through targeted Facebook advertising campaigns. Our mission is to help you generate high-quality leads and expand your real estate business.</p>
     </div>
 
     <!-- Footer -->
