@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - KeyConnect</title>
+    <title>Contact - KeyConnect</title>
     <style>
         /* Global Styles */
         body {
@@ -17,6 +17,7 @@
         /* Header Styling */
         header {
             background-color: #ffffff;
+            color: white;
             padding: 30px 20px;
             display: flex;
             flex-direction: column;
@@ -49,52 +50,56 @@
             color: #cc6a00;
         }
 
-        /* Contact Section */
-        .contact {
-            padding: 50px 20px;
-            text-align: center;
-        }
-
-        .contact h2 {
-            font-size: 40px;
-            margin-bottom: 20px;
-        }
-
-        .contact p {
-            font-size: 22px;
-            color: #555;
-            margin-bottom: 30px;
-        }
-
+        /* Contact Form Section */
         .contact-form {
-            width: 60%;
-            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 500px;
+            background-color: #f9f9f9;
             padding: 20px;
+        }
+
+        .form-container {
+            width: 50%;
             background-color: white;
+            padding: 30px;
             border-radius: 8px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
 
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 15px;
+        .form-container h2 {
+            font-size: 36px;
             margin-bottom: 20px;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-            font-size: 16px;
         }
 
-        .contact-form button {
-            padding: 15px 30px;
+        .form-container label {
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .form-container input, .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .form-container button {
             background-color: #ff8c00;
             color: white;
-            font-size: 18px;
             border: none;
+            padding: 15px 30px;
+            font-size: 18px;
             cursor: pointer;
             border-radius: 8px;
+            transition: background-color 0.3s ease;
         }
 
-        .contact-form button:hover {
+        .form-container button:hover {
             background-color: #cc6a00;
         }
 
@@ -107,12 +112,13 @@
             font-size: 16px;
             margin-top: 50px;
         }
+
     </style>
 </head>
 <body>
 
     <header>
-        <div>KeyConnect</div>
+        <div><a href="index.html" style="text-decoration: none; color: black;">KeyConnect</a></div>
         <!-- Navigation Links -->
         <nav>
             <a href="about.html">About</a>
@@ -121,18 +127,26 @@
         </nav>
     </header>
 
-    <!-- Contact Section -->
-    <div class="contact">
-        <h2>Contact Us</h2>
-        <p>We’d love to hear from you! Please fill out the form below or contact us directly at our numbers:</p>
+    <!-- Contact Form Section -->
+    <div class="contact-form">
+        <div class="form-container">
+            <h2>Contact Us</h2>
+            <form action="submit_form.php" method="POST">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
 
-        <form class="contact-form" action="submit_form.php" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <input type="tel" name="phone" placeholder="Your Phone" required>
-            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Submit</button>
-        </form>
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" name="phone" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
     </div>
 
     <!-- Footer -->
