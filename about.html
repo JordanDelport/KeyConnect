@@ -5,49 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - KeyConnect</title>
     <style>
-        /* Use same styles as previous page */
+        /* Same as offer.html */
         body {
             font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
             background-color: #f4f4f9;
             color: #333;
         }
 
+        h2, h3 {
+            color: #333;
+        }
+
+        /* Header Styling */
         header {
             background-color: #1f1f1f;
             color: white;
-            padding: 30px;
+            padding: 20px;
             text-align: center;
-            font-size: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 24px;
             font-weight: bold;
-            text-transform: uppercase;
         }
 
-        nav {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        nav a {
+        header a {
             text-decoration: none;
-            color: #ff8c00;
-            margin: 0 20px;
-            font-size: 18px;
-        }
-
-        nav .home-btn {
-            background-color: #ff8c00;
             color: white;
-            padding: 10px 20px;
+            margin: 0 15px;
             font-size: 18px;
-            border-radius: 8px;
         }
 
-        nav .home-btn:hover {
-            background-color: #cc6a00;
+        header a:hover {
+            color: #ff8c00;
         }
 
+        /* Container for all content */
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 50px auto;
             padding: 40px;
             background-color: white;
@@ -55,6 +52,7 @@
             border-radius: 12px;
         }
 
+        /* Footer Styling */
         footer {
             text-align: center;
             padding: 25px;
@@ -64,32 +62,34 @@
             margin-top: 50px;
         }
 
-        section {
-            margin-bottom: 50px;
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            header {
+                font-size: 20px;
+                flex-direction: column;
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
-    <header>About Us - KeyConnect</header>
+    <header>
+        <div>KeyConnect</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="offer.html">What We Offer</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
     <div class="container">
-        <nav>
-            <a href="index.html" class="home-btn">Home</a>
-        </nav>
-        
-        <section>
-            <h2>Our Mission</h2>
-            <p>At KeyConnect, we specialize in connecting real estate agents with serious buyers and sellers using targeted advertising strategies.</p>
-        </section>
-
-        <section>
-            <h2>Our Story</h2>
-            <p>Founded by passionate real estate professionals, we understand the challenges agents face. We've created a streamlined process to help agents reach their goals efficiently.</p>
-        </section>
-
-        <section>
-            <h2>Our Values</h2>
-            <p>Integrity, professionalism, and dedication guide our business to deliver measurable results to real estate agents.</p>
+        <section id="about">
+            <h2>About KeyConnect</h2>
+            <p>KeyConnect is a real estate lead generation company that connects real estate agents with high-quality buyers and sellers through targeted advertising. Our services help real estate agents grow their businesses with effective and personalized marketing strategies.</p>
+            <p>Our mission is to bring the best possible leads to real estate agents, creating opportunities for them to expand their clientele and build long-term business success.</p>
         </section>
     </div>
 
