@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KeyConnect - Real Estate Leads</title>
+    <title>Home - KeyConnect</title>
     <style>
         /* Global Styles */
         body {
@@ -14,13 +14,9 @@
             color: #333;
         }
 
-        h2, h3 {
-            color: #333;
-        }
-
         /* Header Styling */
         header {
-            background-color: #1f1f1f;
+            background-color: #ffffff;
             color: white;
             padding: 20px;
             text-align: center;
@@ -31,41 +27,107 @@
             font-weight: bold;
         }
 
+        header div {
+            color: black;
+        }
+
         header a {
             text-decoration: none;
-            color: white;
+            color: #ff8c00;
             margin: 0 15px;
             font-size: 18px;
         }
 
         header a:hover {
-            color: #ff8c00;
+            color: #cc6a00;
         }
 
-        /* Container for all content */
-        .container {
-            max-width: 1000px;
-            margin: 50px auto;
-            padding: 40px;
-            background-color: white;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            border-radius: 12px;
-        }
-
-        /* Navigation Links */
-        nav {
+        /* Hero Section (Main Banner) */
+        .hero {
+            height: 600px;
+            background-image: url('https://via.placeholder.com/1920x600.png?text=Real+Estate+Lead+Generation'); /* Add your background image here */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             text-align: center;
-            margin-top: 20px;
-        }
-        nav a {
-            text-decoration: none;
-            color: #ff8c00;
-            margin: 0 20px;
-            font-size: 18px;
         }
 
-        /* Buttons */
-        .cta button, .package button {
+        .hero h1 {
+            font-size: 60px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 40px;
+        }
+
+        .hero button {
+            padding: 15px 30px;
+            background-color: #ff8c00;
+            color: white;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero button:hover {
+            background-color: #cc6a00;
+        }
+
+        /* Helping Section */
+        .helping {
+            padding: 50px 20px;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        .helping h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .helping p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            color: #555;
+        }
+
+        /* Package Section */
+        .packages {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+            padding: 40px 20px;
+        }
+
+        .package {
+            width: 30%;
+            padding: 20px;
+            border-radius: 12px;
+            background-color: white;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .package h4 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .package p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .cta button {
             background-color: #ff8c00;
             color: white;
             border: none;
@@ -75,55 +137,23 @@
             border-radius: 8px;
             transition: background-color 0.3s ease;
         }
-        .cta button:hover, .package button:hover {
+
+        .cta button:hover {
             background-color: #cc6a00;
-        }
-
-        /* Package Blocks */
-        .packages {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 40px;
-        }
-
-        .package {
-            width: 30%;
-            background-color: white;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        .package h4 {
-            color: #333;
-            font-size: 24px;
         }
 
         /* Footer Styling */
         footer {
             text-align: center;
             padding: 25px;
-            background-color: #1f1f1f;
-            color: white;
+            background-color: #ffffff;
+            color: black;
             font-size: 16px;
             margin-top: 50px;
         }
 
         /* Responsive Design */
         @media screen and (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-            header {
-                font-size: 20px;
-                flex-direction: column;
-                text-align: center;
-            }
-            .cta button {
-                padding: 12px 25px;
-                font-size: 18px;
-            }
             .packages {
                 flex-direction: column;
                 align-items: center;
@@ -132,49 +162,63 @@
                 width: 80%;
                 margin-bottom: 20px;
             }
+            .hero h1 {
+                font-size: 40px;
+            }
+            .hero p {
+                font-size: 18px;
+            }
         }
     </style>
 </head>
 <body>
+
     <header>
         <div>KeyConnect</div>
         <nav>
-            <a href="about.html">About</a>
+            <a href="index.html">Home</a>
             <a href="offer.html">What We Offer</a>
+            <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
 
-    <div class="container">
-        <section id="home">
-            <h2>Helping Real Estate Agents Get Quality Leads</h2>
-            <p>At KeyConnect, we specialize in connecting real estate agents with serious buyers and sellers through targeted Facebook advertising campaigns. Our mission is to help agents grow their business by connecting them with quality leads.</p>
-            <div class="cta">
-                <button>Get Started</button>
-            </div>
-        </section>
-
-        <section id="packages" class="packages">
-            <div class="package">
-                <h4>Basic Package</h4>
-                <p>Basic lead generation for real estate agents.</p>
-                <a href="offer.html#basic"><button>Buy Now</button></a>
-            </div>
-            <div class="package">
-                <h4>Advanced Package</h4>
-                <p>More advanced targeting and higher-quality leads.</p>
-                <a href="offer.html#advanced"><button>Buy Now</button></a>
-            </div>
-            <div class="package">
-                <h4>Premium Package</h4>
-                <p>Full service with detailed analytics and ongoing optimization.</p>
-                <a href="offer.html#premium"><button>Buy Now</button></a>
-            </div>
-        </section>
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Helping Real Estate Agents Get Quality Leads</h1>
+        <p>Connecting you with high-quality buyers and sellers for your business growth</p>
+        <a href="offer.html"><button>Learn More</button></a>
     </div>
 
+    <!-- Helping Section -->
+    <div class="helping">
+        <h2>How We Can Help</h2>
+        <p>We provide tailored lead generation strategies that target the right audience for real estate agents. Our goal is to connect you with potential buyers and sellers, helping you build long-lasting business relationships.</p>
+    </div>
+
+    <!-- Packages Section -->
+    <div class="packages">
+        <div class="package" id="basic">
+            <h4>Basic Package</h4>
+            <p>Affordable lead generation solutions for small businesses.</p>
+            <a href="contact.html"><button>Buy Now</button></a>
+        </div>
+        <div class="package" id="advanced">
+            <h4>Advanced Package</h4>
+            <p>Targeted campaigns to generate higher-quality leads.</p>
+            <a href="contact.html"><button>Buy Now</button></a>
+        </div>
+        <div class="package" id="premium">
+            <h4>Premium Package</h4>
+            <p>Full-service solution with analytics and optimization.</p>
+            <a href="contact.html"><button>Buy Now</button></a>
+        </div>
+    </div>
+
+    <!-- Footer -->
     <footer>
         <p>Contact us: <strong>Jordan van Heerden:</strong> 066 022 3278 | <strong>Kihara Bezuidenhout:</strong> 071 631 3829</p>
     </footer>
+
 </body>
 </html>
