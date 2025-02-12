@@ -11,159 +11,138 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f9;
-            color: #333;
-        }
-
-        h2, h3 {
-            color: #333;
+            color: #333; /* Dark text for better visibility */
         }
 
         /* Header Styling */
         header {
-            background-color: #1f1f1f;
-            color: white;
-            padding: 20px;
-            text-align: center;
+            background-color: #ffffff;
+            padding: 30px 20px;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            font-size: 24px;
+            font-size: 36px;
             font-weight: bold;
+            text-align: center;
         }
 
-        header a {
+        header div {
+            color: black;
+            text-align: center;
+            font-size: 36px;
+        }
+
+        /* Navigation Links */
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
             text-decoration: none;
-            color: white;
+            color: #ff8c00;
             margin: 0 15px;
             font-size: 18px;
         }
 
-        header a:hover {
-            color: #ff8c00;
+        nav a:hover {
+            color: #cc6a00;
         }
 
-        /* Container for all content */
-        .container {
-            max-width: 1000px;
-            margin: 50px auto;
-            padding: 40px;
-            background-color: white;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            border-radius: 12px;
+        /* Offer Section */
+        .offer {
+            padding: 50px 20px;
+            text-align: center;
         }
 
-        /* Package Blocks */
+        .offer h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .offer p {
+            font-size: 22px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
         .packages {
             display: flex;
-            justify-content: space-between;
-            margin-top: 40px;
+            justify-content: space-around;
+            margin-top: 50px;
         }
 
         .package {
             width: 30%;
-            background-color: white;
             padding: 20px;
             border-radius: 12px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
             text-align: center;
+            margin-bottom: 20px;
         }
 
         .package h4 {
-            color: #333;
-            font-size: 24px;
+            font-size: 30px;
+            margin-bottom: 20px;
         }
 
         .package p {
+            font-size: 18px;
             color: #555;
-        }
-
-        .cta button {
-            background-color: #ff8c00;
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            font-size: 20px;
-            cursor: pointer;
-            border-radius: 8px;
-            transition: background-color 0.3s ease;
-        }
-
-        .cta button:hover {
-            background-color: #cc6a00;
         }
 
         /* Footer Styling */
         footer {
             text-align: center;
             padding: 25px;
-            background-color: #1f1f1f;
-            color: white;
+            background-color: #ffffff;
+            color: black;
             font-size: 16px;
             margin-top: 50px;
-        }
-
-        /* Responsive Design */
-        @media screen and (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-            header {
-                font-size: 20px;
-                flex-direction: column;
-                text-align: center;
-            }
-            .cta button {
-                padding: 12px 25px;
-                font-size: 18px;
-            }
-            .packages {
-                flex-direction: column;
-                align-items: center;
-            }
-            .package {
-                width: 80%;
-                margin-bottom: 20px;
-            }
         }
     </style>
 </head>
 <body>
+
     <header>
         <div>KeyConnect</div>
+        <!-- Navigation Links -->
         <nav>
-            <a href="index.html">Home</a>
             <a href="about.html">About</a>
+            <a href="offer.html">What We Offer</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
 
-    <div class="container">
-        <section id="offer">
-            <h2>Our Packages</h2>
-            <p>Choose the package that best fits your business needs. We offer tailored solutions to help you grow your real estate business by generating high-quality leads.</p>
+    <!-- Offer Section -->
+    <div class="offer">
+        <h2>What We Offer</h2>
+        <p>At KeyConnect, we provide high-quality lead generation services tailored to meet the needs of real estate agents. Our goal is to connect you with qualified buyers and sellers, increasing your sales potential and business growth.</p>
 
-            <div class="packages">
-                <div class="package" id="basic">
-                    <h4>Basic Package</h4>
-                    <p>Basic lead generation for real estate agents.</p>
-                    <a href="contact.html"><button>Buy Now</button></a>
-                </div>
-                <div class="package" id="advanced">
-                    <h4>Advanced Package</h4>
-                    <p>Advanced targeting and higher-quality leads.</p>
-                    <a href="contact.html"><button>Buy Now</button></a>
-                </div>
-                <div class="package" id="premium">
-                    <h4>Premium Package</h4>
-                    <p>Full service with detailed analytics and ongoing optimization.</p>
-                    <a href="contact.html"><button>Buy Now</button></a>
-                </div>
+        <div class="packages">
+            <div class="package">
+                <h4>Basic Package</h4>
+                <p>Affordable lead generation solutions for small businesses.</p>
+                <a href="contact.html"><button>Buy Now</button></a>
             </div>
-        </section>
+            <div class="package">
+                <h4>Advanced Package</h4>
+                <p>Targeted campaigns to generate higher-quality leads.</p>
+                <a href="contact.html"><button>Buy Now</button></a>
+            </div>
+            <div class="package">
+                <h4>Premium Package</h4>
+                <p>Full-service solution with analytics and optimization.</p>
+                <a href="contact.html"><button>Buy Now</button></a>
+            </div>
+        </div>
     </div>
 
+    <!-- Footer -->
     <footer>
         <p>Contact us: <strong>Jordan van Heerden:</strong> 066 022 3278 | <strong>Kihara Bezuidenhout:</strong> 071 631 3829</p>
     </footer>
+
 </body>
 </html>
