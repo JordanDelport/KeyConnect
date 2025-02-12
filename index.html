@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KeyConnect</title>
+    <title>Home - KeyConnect</title>
     <style>
         /* Global Styles */
         body {
@@ -11,12 +11,13 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f9;
-            color: #333;
+            color: #333; /* Dark text for better visibility */
         }
 
         /* Header Styling */
         header {
             background-color: #ffffff;
+            color: white;
             padding: 30px 20px;
             display: flex;
             flex-direction: column;
@@ -27,14 +28,10 @@
             text-align: center;
         }
 
-        header div a {
+        header div {
             color: black;
-            text-decoration: none;
+            text-align: center;
             font-size: 36px;
-        }
-
-        header div a:hover {
-            text-decoration: underline;
         }
 
         /* Navigation Links */
@@ -53,67 +50,120 @@
             color: #cc6a00;
         }
 
-        /* Home Section */
-        .home {
-            padding: 50px 20px;
-            text-align: center;
+        /* Hero Section (Main Banner) */
+        .hero {
+            height: 600px;
             background-image: url('https://images.pexels.com/photos/4245929/pexels-photo-4245929.jpeg');
             background-size: cover;
+            background-position: center;
             color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            position: relative;
         }
 
-        .home h2 {
+        /* Background overlay to improve text visibility */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4); /* Adding semi-transparent black background */
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            z-index: 2; /* Bring the text above the overlay */
+        }
+
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 40px;
+            z-index: 2; /* Bring the text above the overlay */
+        }
+
+        .hero button {
+            padding: 15px 30px;
+            background-color: #ff8c00;
+            color: white;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            z-index: 2;
+        }
+
+        .hero button:hover {
+            background-color: #cc6a00;
+        }
+
+        /* Helping Section */
+        .helping {
+            padding: 50px 20px;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        .helping h2 {
             font-size: 40px;
             margin-bottom: 20px;
         }
 
-        .home p {
-            font-size: 22px;
+        .helping p {
+            font-size: 20px;
+            margin-bottom: 40px;
             color: #555;
-            margin-bottom: 30px;
         }
 
-        .learn-more-btn {
-            background-color: #ff8c00;
-            color: white;
-            font-size: 18px;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 8px;
-        }
-
-        .learn-more-btn:hover {
-            background-color: #cc6a00;
-        }
-
-        /* Offer Table Section */
-        .offer-table {
+        /* Package Section */
+        .packages {
+            display: flex;
+            justify-content: space-around;
             margin-top: 50px;
-            padding: 50px;
+            padding: 40px 20px;
+        }
+
+        .package {
+            width: 30%;
+            padding: 20px;
+            border-radius: 12px;
+            background-color: white;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
             text-align: center;
-            background-color: #fff;
-            border-radius: 8px;
+            margin-bottom: 20px;
         }
 
-        .offer-table table {
-            width: 100%;
-            margin: 0 auto;
-            border-collapse: collapse;
+        .package h4 {
+            font-size: 30px;
+            margin-bottom: 20px;
         }
 
-        .offer-table table th, .offer-table table td {
-            padding: 10px;
-            text-align: center;
-            border: 1px solid #ccc;
+        .package p {
+            font-size: 18px;
+            color: #555;
         }
 
-        .offer-table table th {
+        .cta button {
             background-color: #ff8c00;
             color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
         }
 
-        .offer-table table tr:nth-child(even) {
-            background-color: #f2f2f2;
+        .cta button:hover {
+            background-color: #cc6a00;
         }
 
         /* Footer Styling */
@@ -125,12 +175,31 @@
             font-size: 16px;
             margin-top: 50px;
         }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .packages {
+                flex-direction: column;
+                align-items: center;
+            }
+            .package {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+            .hero h1 {
+                font-size: 40px;
+            }
+            .hero p {
+                font-size: 18px;
+            }
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <div><a href="index.html">KeyConnect</a></div> <!-- Clickable KeyConnect -->
+        <div>KeyConnect</div>
+        <!-- Navigation Links -->
         <nav>
             <a href="about.html">About</a>
             <a href="offer.html">What We Offer</a>
@@ -138,38 +207,36 @@
         </nav>
     </header>
 
-    <!-- Home Section -->
-    <div class="home">
-        <h2>Looking for High-Quality Leads?</h2>
-        <p>KeyConnect connects you to high-quality leads in the real estate market. We specialize in targeted campaigns for real estate agents, helping you grow your business and increase sales potential.</p>
-        <a href="#services" class="learn-more-btn">Learn More</a>
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Looking for High-Quality Leads?</h1>
+        <p>KeyConnect connects you to high-quality buyers and sellers, providing tailored lead generation strategies for real estate agents.</p>
+        <a href="offer.html"><button>Learn More</button></a> <!-- Fixed link here -->
     </div>
 
-    <!-- "What We Offer" Section -->
-    <div id="services" class="offer-table">
-        <h3>What We Offer</h3>
-        <table>
-            <tr>
-                <th>Service</th>
-                <th>Description</th>
-                <th>Price</th>
-            </tr>
-            <tr>
-                <td>Lead Generation</td>
-                <td>We generate high-quality leads using targeted Facebook ads.</td>
-                <td>$500/month</td>
-            </tr>
-            <tr>
-                <td>Full Service</td>
-                <td>We create and manage end-to-end marketing campaigns for real estate agents.</td>
-                <td>$1500/month</td>
-            </tr>
-            <tr>
-                <td>Custom Campaigns</td>
-                <td>Custom ad strategies tailored to your specific needs and market.</td>
-                <td>Contact for pricing</td>
-            </tr>
-        </table>
+    <!-- Helping Section -->
+    <div class="helping">
+        <h2>How We Can Help</h2>
+        <p>We provide tailored lead generation strategies that target the right audience for real estate agents. Our goal is to connect you with potential buyers and sellers, helping you build long-lasting business relationships.</p>
+    </div>
+
+    <!-- Packages Section -->
+    <div class="packages">
+        <div class="package" id="basic">
+            <h4>Basic Package</h4>
+            <p>Affordable lead generation solutions for small businesses.</p>
+            <a href="contact.html"><button>Buy Now</button></a>
+        </div>
+        <div class="package" id="advanced">
+            <h4>Advanced Package</h4>
+            <p>Targeted campaigns to generate higher-quality leads.</p>
+            <a href="contact.html"><button>Buy Now</button></a>
+        </div>
+        <div class="package" id="premium">
+            <h4>Premium Package</h4>
+            <p>Full-service solution with analytics and optimization.</p>
+            <a href="contact.html"><button>Buy Now</button></a>
+        </div>
     </div>
 
     <!-- Footer -->
