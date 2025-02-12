@@ -20,25 +20,33 @@
             color: white;
             padding: 30px 20px;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             font-size: 36px;
             font-weight: bold;
+            text-align: center;
         }
 
         header div {
             color: black;
             text-align: center;
+            font-size: 36px;
         }
 
-        header a {
+        /* Navigation Links */
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
             text-decoration: none;
             color: #ff8c00;
             margin: 0 15px;
             font-size: 18px;
         }
 
-        header a:hover {
+        nav a:hover {
             color: #cc6a00;
         }
 
@@ -191,6 +199,12 @@
 
     <header>
         <div>KeyConnect</div>
+        <!-- Navigation Links -->
+        <nav>
+            <a href="about.html">About</a>
+            <a href="offer.html">What We Offer</a>
+            <a href="contact.html">Contact</a>
+        </nav>
     </header>
 
     <!-- Hero Section -->
