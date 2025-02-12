@@ -50,79 +50,6 @@
             color: #cc6a00;
         }
 
-        /* Hero Section (Main Banner) */
-        .hero {
-            height: 600px;
-            background-image: url('https://images.pexels.com/photos/4245929/pexels-photo-4245929.jpeg');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-            position: relative;
-        }
-
-        /* Background overlay to improve text visibility */
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4); /* Adding semi-transparent black background */
-            z-index: 1;
-        }
-
-        .hero h1 {
-            font-size: 60px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            z-index: 2; /* Bring the text above the overlay */
-        }
-
-        .hero p {
-            font-size: 22px;
-            margin-bottom: 40px;
-            z-index: 2; /* Bring the text above the overlay */
-        }
-
-        .hero button {
-            padding: 15px 30px;
-            background-color: #ff8c00;
-            color: white;
-            font-size: 20px;
-            border: none;
-            cursor: pointer;
-            border-radius: 8px;
-            transition: background-color 0.3s ease;
-            z-index: 2;
-        }
-
-        .hero button:hover {
-            background-color: #cc6a00;
-        }
-
-        /* Helping Section */
-        .helping {
-            padding: 50px 20px;
-            background-color: #f0f0f0;
-            text-align: center;
-        }
-
-        .helping h2 {
-            font-size: 40px;
-            margin-bottom: 20px;
-        }
-
-        .helping p {
-            font-size: 20px;
-            margin-bottom: 40px;
-            color: #555;
-        }
-
         /* Package Section */
         .packages {
             display: flex;
@@ -186,12 +113,6 @@
                 width: 80%;
                 margin-bottom: 20px;
             }
-            .hero h1 {
-                font-size: 40px;
-            }
-            .hero p {
-                font-size: 18px;
-            }
         }
     </style>
 </head>
@@ -207,20 +128,7 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <div class="hero">
-        <h1>Looking for High-Quality Leads?</h1>
-        <p>KeyConnect connects you to high-quality buyers and sellers, providing tailored lead generation strategies for real estate agents.</p>
-        <a href="contact.html"><button>Learn More</button></a>
-    </div>
-
-    <!-- Helping Section -->
-    <div class="helping">
-        <h2>How We Can Help</h2>
-        <p>We provide tailored lead generation strategies that target the right audience for real estate agents. Our goal is to connect you with potential buyers and sellers, helping you build long-lasting business relationships.</p>
-    </div>
-
-    <!-- Packages Section -->
+    <!-- Package Section -->
     <div class="packages">
         <div class="package" id="basic">
             <h4>Basic Package</h4>
