@@ -13,10 +13,11 @@
             background-color: #f4f4f9;
             color: #333;
         }
+
         h2, h3 {
             color: #333;
         }
-        
+
         /* Header Styling */
         header {
             background-color: #1f1f1f;
@@ -27,7 +28,32 @@
             font-weight: bold;
             text-transform: uppercase;
         }
-        
+
+        /* Navigation Links */
+        nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ff8c00;
+            margin: 0 20px;
+            font-size: 18px;
+        }
+
+        nav .home-btn {
+            background-color: #ff8c00;
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 8px;
+        }
+
+        nav .home-btn:hover {
+            background-color: #cc6a00;
+        }
+
         /* Container for all content */
         .container {
             max-width: 1000px;
@@ -38,18 +64,11 @@
             border-radius: 12px;
         }
 
-        /* Navigation Links */
-        nav {
-            text-align: center;
-            margin-top: 20px;
+        /* Spacing between sections */
+        section {
+            margin-bottom: 50px;
         }
-        nav a {
-            text-decoration: none;
-            color: #ff8c00;
-            margin: 0 20px;
-            font-size: 18px;
-        }
-        
+
         /* Buttons */
         .cta button, .package button {
             background-color: #ff8c00;
@@ -61,16 +80,18 @@
             border-radius: 8px;
             transition: background-color 0.3s ease;
         }
+
         .cta button:hover, .package button:hover {
             background-color: #cc6a00;
         }
-        
+
         /* Package Blocks */
         .packages {
             display: flex;
             justify-content: space-between;
             margin-top: 40px;
         }
+
         .package {
             width: 30%;
             background-color: white;
@@ -79,6 +100,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
+
         .package h4 {
             color: #333;
             font-size: 24px;
@@ -99,17 +121,21 @@
             .container {
                 padding: 20px;
             }
+
             header {
                 font-size: 24px;
             }
+
             .cta button {
                 padding: 12px 25px;
                 font-size: 18px;
             }
+
             .packages {
                 flex-direction: column;
                 align-items: center;
             }
+
             .package {
                 width: 80%;
                 margin-bottom: 20px;
@@ -126,8 +152,9 @@
             <a href="about.html">About Us</a>
             <a href="offer.html">What We Offer</a>
             <a href="contact.html">Contact</a>
+            <a href="index.html" class="home-btn">Home</a>
         </nav>
-        
+
         <!-- Home Section -->
         <section id="home">
             <h2>Helping Real Estate Agents Get Quality Leads</h2>
