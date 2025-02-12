@@ -22,36 +22,24 @@
         header {
             background-color: #1f1f1f;
             color: white;
-            padding: 30px;
+            padding: 20px;
             text-align: center;
-            font-size: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 24px;
             font-weight: bold;
-            text-transform: uppercase;
         }
 
-        /* Navigation Links */
-        nav {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        nav a {
+        header a {
             text-decoration: none;
-            color: #ff8c00;
-            margin: 0 20px;
-            font-size: 18px;
-        }
-
-        nav .home-btn {
-            background-color: #ff8c00;
             color: white;
-            padding: 10px 20px;
+            margin: 0 15px;
             font-size: 18px;
-            border-radius: 8px;
         }
 
-        nav .home-btn:hover {
-            background-color: #cc6a00;
+        header a:hover {
+            color: #ff8c00;
         }
 
         /* Container for all content */
@@ -64,9 +52,16 @@
             border-radius: 12px;
         }
 
-        /* Spacing between sections */
-        section {
-            margin-bottom: 50px;
+        /* Navigation Links */
+        nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #ff8c00;
+            margin: 0 20px;
+            font-size: 18px;
         }
 
         /* Buttons */
@@ -80,7 +75,6 @@
             border-radius: 8px;
             transition: background-color 0.3s ease;
         }
-
         .cta button:hover, .package button:hover {
             background-color: #cc6a00;
         }
@@ -121,21 +115,19 @@
             .container {
                 padding: 20px;
             }
-
             header {
-                font-size: 24px;
+                font-size: 20px;
+                flex-direction: column;
+                text-align: center;
             }
-
             .cta button {
                 padding: 12px 25px;
                 font-size: 18px;
             }
-
             .packages {
                 flex-direction: column;
                 align-items: center;
             }
-
             .package {
                 width: 80%;
                 margin-bottom: 20px;
@@ -144,27 +136,24 @@
     </style>
 </head>
 <body>
-    <header>KeyConnect - Connecting Quality Buyers & Sellers</header>
-
-    <div class="container">
-        <!-- Navigation Links -->
+    <header>
+        <div>KeyConnect</div>
         <nav>
-            <a href="about.html">About Us</a>
+            <a href="about.html">About</a>
             <a href="offer.html">What We Offer</a>
             <a href="contact.html">Contact</a>
-            <a href="index.html" class="home-btn">Home</a>
         </nav>
+    </header>
 
-        <!-- Home Section -->
+    <div class="container">
         <section id="home">
             <h2>Helping Real Estate Agents Get Quality Leads</h2>
-            <p>We specialize in connecting real estate agents with serious buyers and sellers using targeted advertising strategies.</p>
+            <p>At KeyConnect, we specialize in connecting real estate agents with serious buyers and sellers through targeted Facebook advertising campaigns. Our mission is to help agents grow their business by connecting them with quality leads.</p>
             <div class="cta">
                 <button>Get Started</button>
             </div>
         </section>
 
-        <!-- Packages Section -->
         <section id="packages" class="packages">
             <div class="package">
                 <h4>Basic Package</h4>
