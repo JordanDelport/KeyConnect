@@ -5,37 +5,159 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What We Offer - KeyConnect</title>
     <style>
-        /* Use the same CSS from above */
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        h2, h3 {
+            color: #333;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #1f1f1f;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        header a {
+            text-decoration: none;
+            color: white;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        header a:hover {
+            color: #ff8c00;
+        }
+
+        /* Container for all content */
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 40px;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+        }
+
+        /* Package Blocks */
+        .packages {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+        .package {
+            width: 30%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .package h4 {
+            color: #333;
+            font-size: 24px;
+        }
+
+        .package p {
+            color: #555;
+        }
+
+        .cta button {
+            background-color: #ff8c00;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta button:hover {
+            background-color: #cc6a00;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background-color: #1f1f1f;
+            color: white;
+            font-size: 16px;
+            margin-top: 50px;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            header {
+                font-size: 20px;
+                flex-direction: column;
+                text-align: center;
+            }
+            .cta button {
+                padding: 12px 25px;
+                font-size: 18px;
+            }
+            .packages {
+                flex-direction: column;
+                align-items: center;
+            }
+            .package {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+        }
     </style>
 </head>
 <body>
-    <header>What We Offer - KeyConnect</header>
+    <header>
+        <div>KeyConnect</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
     <div class="container">
-        <nav>
-            <a href="index.html" class="home-btn">Home</a>
-        </nav>
-        
-        <section>
+        <section id="offer">
             <h2>Our Packages</h2>
-            <p>Explore the different packages we offer for real estate agents looking to connect with serious buyers and sellers.</p>
+            <p>Choose the package that best fits your business needs. We offer tailored solutions to help you grow your real estate business by generating high-quality leads.</p>
 
-            <div class="package-detail" id="basic">
-                <h3>Basic Package</h3>
-                <p>This package offers basic lead generation through targeted ads.</p>
-                <button>Buy Now</button>
-            </div>
-
-            <div class="package-detail" id="advanced">
-                <h3>Advanced Package</h3>
-                <p>This package offers more advanced targeting for higher-quality leads.</p>
-                <button>Buy Now</button>
-            </div>
-
-            <div class="package-detail" id="premium">
-                <h3>Premium Package</h3>
-                <p>Full service with detailed analytics and ongoing optimization.</p>
-                <button>Buy Now</button>
+            <div class="packages">
+                <div class="package" id="basic">
+                    <h4>Basic Package</h4>
+                    <p>Basic lead generation for real estate agents.</p>
+                    <a href="contact.html"><button>Buy Now</button></a>
+                </div>
+                <div class="package" id="advanced">
+                    <h4>Advanced Package</h4>
+                    <p>Advanced targeting and higher-quality leads.</p>
+                    <a href="contact.html"><button>Buy Now</button></a>
+                </div>
+                <div class="package" id="premium">
+                    <h4>Premium Package</h4>
+                    <p>Full service with detailed analytics and ongoing optimization.</p>
+                    <a href="contact.html"><button>Buy Now</button></a>
+                </div>
             </div>
         </section>
     </div>
