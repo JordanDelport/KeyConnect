@@ -5,83 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - KeyConnect</title>
     <style>
-        /* Same as previous pages */
+        /* Global Styles */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f9;
-            color: #333;
-        }
-
-        h2, h3 {
-            color: #333;
+            color: #333; /* Dark text for better visibility */
         }
 
         /* Header Styling */
         header {
-            background-color: #1f1f1f;
-            color: white;
-            padding: 20px;
-            text-align: center;
+            background-color: #ffffff;
+            padding: 30px 20px;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            font-size: 24px;
+            font-size: 36px;
             font-weight: bold;
+            text-align: center;
         }
 
-        header a {
+        header div {
+            color: black;
+            text-align: center;
+            font-size: 36px;
+        }
+
+        /* Navigation Links */
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
             text-decoration: none;
-            color: white;
+            color: #ff8c00;
             margin: 0 15px;
             font-size: 18px;
         }
 
-        header a:hover {
-            color: #ff8c00;
+        nav a:hover {
+            color: #cc6a00;
         }
 
-        /* Container for all content */
-        .container {
-            max-width: 1000px;
-            margin: 50px auto;
-            padding: 40px;
+        /* Contact Section */
+        .contact {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            font-size: 22px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .contact-form {
+            width: 60%;
+            margin: 0 auto;
+            padding: 20px;
             background-color: white;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            border-radius: 12px;
-        }
-
-        /* Contact Form */
-        form {
-            display: grid;
-            gap: 20px;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
             border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
 
-        textarea {
-            resize: vertical;
-            height: 150px;
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 16px;
         }
 
-        .cta button {
+        .contact-form button {
+            padding: 15px 30px;
             background-color: #ff8c00;
             color: white;
+            font-size: 18px;
             border: none;
-            padding: 15px 30px;
-            font-size: 20px;
             cursor: pointer;
             border-radius: 8px;
-            transition: background-color 0.3s ease;
         }
 
-        .cta button:hover {
+        .contact-form button:hover {
             background-color: #cc6a00;
         }
 
@@ -89,53 +102,43 @@
         footer {
             text-align: center;
             padding: 25px;
-            background-color: #1f1f1f;
-            color: white;
+            background-color: #ffffff;
+            color: black;
             font-size: 16px;
             margin-top: 50px;
-        }
-
-        /* Responsive Design */
-        @media screen and (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-            header {
-                font-size: 20px;
-                flex-direction: column;
-                text-align: center;
-            }
         }
     </style>
 </head>
 <body>
+
     <header>
         <div>KeyConnect</div>
+        <!-- Navigation Links -->
         <nav>
-            <a href="index.html">Home</a>
-            <a href="offer.html">What We Offer</a>
             <a href="about.html">About</a>
+            <a href="offer.html">What We Offer</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
 
-    <div class="container">
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <form>
-                <input type="text" placeholder="First Name" required>
-                <input type="text" placeholder="Last Name" required>
-                <input type="tel" placeholder="Phone Number" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Message" required></textarea>
-                <div class="cta">
-                    <button type="submit">Submit</button>
-                </div>
-            </form>
-        </section>
+    <!-- Contact Section -->
+    <div class="contact">
+        <h2>Contact Us</h2>
+        <p>We’d love to hear from you! Please fill out the form below or contact us directly at our numbers:</p>
+
+        <form class="contact-form" action="submit_form.php" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="tel" name="phone" placeholder="Your Phone" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
     </div>
 
+    <!-- Footer -->
     <footer>
         <p>Contact us: <strong>Jordan van Heerden:</strong> 066 022 3278 | <strong>Kihara Bezuidenhout:</strong> 071 631 3829</p>
     </footer>
+
 </body>
 </html>
